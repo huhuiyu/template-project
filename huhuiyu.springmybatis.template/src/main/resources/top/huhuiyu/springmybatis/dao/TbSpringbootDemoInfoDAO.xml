@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.springmybatis.dao.TbSpringbootDemoInfoDAO">
+    
+  <select id="queryAll" resultType="TbSpringbootDemoInfo" parameterType="TbSpringbootDemoInfo">
+    select iid,info_key,info,lastupdate from tb_springboot_demo_info
+    <trim prefix="where" prefixOverrides="and">
+      <if test="infoKey!=null and infoKey!=''.toString()"> and info_key like #{infoKey}</if>
+      <if test="info!=null and info!=''"> and info like #{info}</if>
+    </trim>
+  </select>
+  
+  <insert id="add" parameterType="TbSpringbootDemoInfo">
+    insert into tb_springboot_demo_info(info_key,info)
+    values(#{infoKey},#{info})
+  </insert>
+  
+  <update id="update" parameterType="TbSpringbootDemoInfo">
+    update tb_springboot_demo_info set info_key=#{infoKey},info=#{info}
+    where iid=#{iid}
+  </update>
+  
+  <delete id="delete" parameterType="TbSpringbootDemoInfo" >
+    delete from tb_springboot_demo_info
+    where iid=#{iid}
+  </delete>
+  
+</mapper>
