@@ -5,6 +5,7 @@
     </div>
     <div class="links tc">
       <span @click="toPage('/test/ajax')">ajax测试</span>
+      <span @click="toPage('/test/vuex')">vuex测试</span>
     </div>
   </div>
 </template>

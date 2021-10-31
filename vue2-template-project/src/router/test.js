@@ -11,6 +11,11 @@ if (process.env.NODE_ENV !== 'production') {
     name: 'TestAjax',
     component: () => import('../views/test/Ajax.vue'),
   })
+  routes.push({
+    path: '/test/vuex',
+    name: 'TestVuex',
+    component: () => import('../views/test/Vuex.vue'),
+  })
 }
 
 export default routes
