@@ -1,5 +1,6 @@
 <template>
   <div class="links tc">
+    <span @click="toPage('/vant')">有赞ui首页</span>
     <span @click="toPage('/test')">测试首页</span>
     <span @click="toPage('/nopage')">路由错误测试</span>
   </div>

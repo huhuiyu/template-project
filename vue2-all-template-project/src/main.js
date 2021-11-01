@@ -8,6 +8,12 @@ Vue.use(myplugins)
 // 过滤器导入
 import './filters/myfilters'
 
+// 有赞ui
+import Vant from 'vant'
+import 'vant/lib/index.css'
+
+Vue.use(Vant)
+
 Vue.config.productionTip = false
 
 new Vue({

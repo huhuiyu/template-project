@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import test_router from '../router/test'
 import error_router from '../router/error'
+import vant_router from '../router/vant'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,7 @@ const routes = [
     component: () => import('../views/Home.vue'),
   },
 ]
+  .concat(vant_router)
   .concat(test_router)
   .concat(error_router)
   .concat({
