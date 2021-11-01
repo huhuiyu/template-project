@@ -9,6 +9,11 @@ const routes = [
     name: 'VantPopup',
     component: () => import('../views/vant/Popup.vue'),
   },
+  {
+    path: '/vant/cascader',
+    name: 'VantCascader',
+    component: () => import('../views/vant/Cascader.vue'),
+  },
 ]
 
 export default routes

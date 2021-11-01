@@ -3,6 +3,7 @@
     <div class="pd10 tc">{{ title }}</div>
     <div class="pd10">
       <van-button type="primary" @click="toPage('/vant/popup')">弹出层</van-button>
+      <van-button type="primary" @click="toPage('/vant/cascader')">级联</van-button>
     </div>
   </div>
 </template>
